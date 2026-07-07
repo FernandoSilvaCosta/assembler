@@ -62,7 +62,7 @@ Assembly Hack → Parser → SymbolTable → Code → Binário .hack
 | C-instruction | 111accccccdddjjj | D=A → 1110110000010000 |
 
 ---
-## 📦 Arquivos Principais
+## 📦 Arquivos Principais      
 
 ### parser.py
 Lê o arquivo .asm, remove comentários e classifica cada instrução como A_INSTRUCTION, C_INSTRUCTION ou LABEL. Extrai symbol, dest, comp e jump de cada instrução.
@@ -210,6 +210,9 @@ O projeto segue a metodologia TDD (Test Driven Development).
 
 ---
 
+## Video de Apresentação 
+
+- https://drive.google.com/file/d/1Y_yu_Ol9VbQTNwzcOUrV_8vVo6J-_4C2/view?usp=sharing
 
 
 ## 📚 Referências
