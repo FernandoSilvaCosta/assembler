@@ -13,7 +13,7 @@ def test_predefined_symbols():
     assert table.get_address('THAT') == 4
     assert table.get_address('SCREEN') == 16384
     assert table.get_address('KBD') == 24576
-    print("✅ Teste de símbolos predefinidos passou!")
+    print(" Teste de símbolos predefinidos passou!")
 
 
 def test_add_entry():
@@ -22,7 +22,7 @@ def test_add_entry():
     table.add_entry('LOOP', 10)
     assert table.get_address('LOOP') == 10
     assert table.contains('LOOP') == True
-    print("✅ Teste de add_entry passou!")
+    print(" Teste de add_entry passou!")
 
 
 def test_add_variable():
@@ -32,7 +32,7 @@ def test_add_variable():
     addr2 = table.add_variable('soma')
     assert addr1 == 16
     assert addr2 == 17
-    print("✅ Teste de add_variable passou!")
+    print(" Teste de add_variable passou!")
 
 
 def test_add_variable_already_exists():
@@ -41,7 +41,7 @@ def test_add_variable_already_exists():
     addr1 = table.add_variable('contador')
     addr2 = table.add_variable('contador')
     assert addr1 == addr2 == 16
-    print("✅ Teste de add_variable existente passou!")
+    print(" Teste de add_variable existente passou!")
 
 
 def test_contains():
@@ -51,14 +51,14 @@ def test_contains():
     assert table.contains('LOOP') == False
     table.add_entry('LOOP', 10)
     assert table.contains('LOOP') == True
-    print("✅ Teste de contains passou!")
+    print(" Teste de contains passou!")
 
 
 def test_get_address_not_found():
     """Testa get_address para símbolo inexistente."""
     table = SymbolTable()
     assert table.get_address('NAO_EXISTE') is None
-    print("✅ Teste de get_address não encontrado passou!")
+    print(" Teste de get_address não encontrado passou!")
 
 
 def test_variable_allocation_sequence():
@@ -67,5 +67,5 @@ def test_variable_allocation_sequence():
     for i in range(5):
         addr = table.add_variable(f'var{i}')
         assert addr == 16 + i
-    print("✅ Teste de sequência de alocação passou!")
+    print(" Teste de sequência de alocação passou!")
 

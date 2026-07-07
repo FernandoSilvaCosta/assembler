@@ -19,7 +19,7 @@ def test_a_instruction():
     assert parser.instruction_type() == InstructionType.A_INSTRUCTION
     assert parser.symbol() == '10'
     os.unlink(path)
-    print("✅ Teste de A-instruction passou!")
+    print(" Teste de A-instruction passou!")
 
 
 def test_a_instruction_symbol():
@@ -30,7 +30,7 @@ def test_a_instruction_symbol():
     assert parser.instruction_type() == InstructionType.A_INSTRUCTION
     assert parser.symbol() == 'LOOP'
     os.unlink(path)
-    print("✅ Teste de A-instruction com símbolo passou!")
+    print(" Teste de A-instruction com símbolo passou!")
 
 
 def test_label():
@@ -41,7 +41,7 @@ def test_label():
     assert parser.instruction_type() == InstructionType.LABEL
     assert parser.symbol() == 'LOOP'
     os.unlink(path)
-    print("✅ Teste de Label passou!")
+    print(" Teste de Label passou!")
 
 
 def test_c_instruction_dest_comp():
@@ -54,7 +54,7 @@ def test_c_instruction_dest_comp():
     assert parser.comp() == 'A'
     assert parser.jump() is None
     os.unlink(path)
-    print("✅ Teste de C-instruction dest=comp passou!")
+    print(" Teste de C-instruction dest=comp passou!")
 
 
 def test_c_instruction_comp_jump():
@@ -67,7 +67,7 @@ def test_c_instruction_comp_jump():
     assert parser.comp() == 'D'
     assert parser.jump() == 'JGT'
     os.unlink(path)
-    print("✅ Teste de C-instruction comp;jump passou!")
+    print(" Teste de C-instruction comp;jump passou!")
 
 
 def test_c_instruction_dest_comp_jump():
@@ -80,7 +80,7 @@ def test_c_instruction_dest_comp_jump():
     assert parser.comp() == 'D+1'
     assert parser.jump() == 'JMP'
     os.unlink(path)
-    print("✅ Teste de C-instruction dest=comp;jump passou!")
+    print(" Teste de C-instruction dest=comp;jump passou!")
 
 
 def test_ignore_comments():
@@ -93,7 +93,7 @@ def test_ignore_comments():
     parser.advance()
     assert parser.symbol() == '10'
     os.unlink(path)
-    print("✅ Teste de ignorar comentários passou!")
+    print(" Teste de ignorar comentários passou!")
 
 
 def test_has_more_instructions():
@@ -106,7 +106,7 @@ def test_has_more_instructions():
     parser.advance()
     assert parser.has_more_instructions() == False
     os.unlink(path)
-    print("✅ Teste de has_more_instructions passou!")
+    print(" Teste de has_more_instructions passou!")
 
 
 def test_multiple_instructions():
@@ -132,6 +132,6 @@ def test_multiple_instructions():
     assert parser.instruction_type() == InstructionType.C_INSTRUCTION
 
     os.unlink(path)
-    print("✅ Teste de múltiplas instruções passou!")
+    print(" Teste de múltiplas instruções passou!")
 
 
