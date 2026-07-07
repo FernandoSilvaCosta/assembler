@@ -68,3 +68,4 @@ def test_variable_allocation_sequence():
         addr = table.add_variable(f'var{i}')
         assert addr == 16 + i
     print("✅ Teste de sequência de alocação passou!")
+
