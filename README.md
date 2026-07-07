@@ -13,32 +13,29 @@ Montador (assembler) que traduz programas em Assembly Hack (.asm) para código d
 ## 📁 Estrutura do Projeto
 
 assembler/
-├── parser.py           # Analisador de arquivos .asm
-├── symbol_table.py     # Tabela de símbolos
-├── code.py             # Gerador de código binário
-├── main.py             # Orquestrador em duas passagens
-│
-├── tests/
-│   ├── test_parser.py
-│   ├── test_symbol_table.py
-│   └── test_code.py
-│
-├── projects/
-│   └── 6/
-│       ├── add/
-│       │   └── Add.asm
-│       ├── max/
-│       │   ├── Max.asm
-│       │   └── MaxL.asm
-│       ├── rect/
-│       │   ├── Rect.asm
-│       │   └── RectL.asm
-│       └── pong/
-│           ├── Pong.asm
-│           └── PongL.asm
-│
-├── .gitignore
-└── README.md
+── parser.py           # Analisador de arquivos .asm
+── symbol_table.py     # Tabela de símbolos
+── code.py             # Gerador de código binário
+── main.py             # Orquestrador em duas passagens
+── tests/
+      ── test_parser.py
+      ── test_symbol_table.py
+      ── test_code.py
+── projects/
+      ── 6/
+            ── add/
+            ── Add.asm
+            ── max/
+            ── Max.asm
+            ── MaxL.asm
+            ── rect/
+            ── Rect.asm
+            ── RectL.asm
+            ── pong/
+            ── Pong.asm
+            ── PongL.asm
+── .gitignore
+── README.md
 
 ---
 
