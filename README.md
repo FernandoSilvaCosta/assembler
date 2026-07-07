@@ -61,6 +61,23 @@ Assembly Hack → Parser → SymbolTable → Code → Binário .hack
 | A-instruction | 0vvvvvvvvvvvvvvv | @10 → 0000000000001010 |
 | C-instruction | 111accccccdddjjj | D=A → 1110110000010000 |
 
+---
+## 📦 Arquivos Principais
+
+### parser.py
+Lê o arquivo .asm, remove comentários e classifica cada instrução como A_INSTRUCTION, C_INSTRUCTION ou LABEL. Extrai symbol, dest, comp e jump de cada instrução.
+
+### symbol_table.py
+Gerencia o mapeamento entre símbolos e endereços de memória. Inicializa com símbolos predefinidos e aloca variáveis a partir do endereço 16.
+
+### code.py
+Traduz os campos dest, comp e jump de C-instructions para código binário usando tabelas de mapeamento.
+
+### main.py
+Orquestra a tradução em duas passagens. Na primeira registra labels, na segunda gera o código binário final.
+
+---
+
 ### Duas Passagens
 
 Primeira passagem — registra labels na tabela de símbolos:
@@ -193,21 +210,7 @@ O projeto segue a metodologia TDD (Test Driven Development).
 
 ---
 
-## 📦 Arquivos Principais
 
-### parser.py
-Lê o arquivo .asm, remove comentários e classifica cada instrução como A_INSTRUCTION, C_INSTRUCTION ou LABEL. Extrai symbol, dest, comp e jump de cada instrução.
-
-### symbol_table.py
-Gerencia o mapeamento entre símbolos e endereços de memória. Inicializa com símbolos predefinidos e aloca variáveis a partir do endereço 16.
-
-### code.py
-Traduz os campos dest, comp e jump de C-instructions para código binário usando tabelas de mapeamento.
-
-### main.py
-Orquestra a tradução em duas passagens. Na primeira registra labels, na segunda gera o código binário final.
-
----
 
 ## 📚 Referências
 
